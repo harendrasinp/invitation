@@ -1,4 +1,5 @@
 "use client"
+import { clear } from "console";
 import { use, useState } from "react"
 
 
@@ -11,6 +12,10 @@ export default function Home() {
   const handleSubmit=(e:any)=>{
     e.preventDefault();
     alert(`Welcome ${formData.name}, you are invited to the Vastu poojan!`);
+    setFormData({
+    name: "",
+    gender: "",
+  });
   }
   return (
     <div className="h-screen w-full p-2">
