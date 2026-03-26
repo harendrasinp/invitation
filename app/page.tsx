@@ -29,6 +29,7 @@ export default function Home() {
           <input type="text"className="mt-1 p-1 border border-gray-300 rounded-lg w-full max-w-sm"
           placeholder="Your Name" 
           name="name" 
+          value={formData.name}
           onChange={handleChange} />
           <div>
             <label className="block mt-2 text-sm text-gray-700">
@@ -36,6 +37,7 @@ export default function Home() {
               type="radio" 
               name="gender" 
               value="male" 
+              checked={formData.gender === "male"}
               onChange={handleChange}/> Male
             </label>
 
@@ -44,6 +46,7 @@ export default function Home() {
               type="radio" 
               name="gender" 
               value="female" 
+              checked={formData.gender === "female"}
               onChange={handleChange}/> Female
             </label>
           </div>
