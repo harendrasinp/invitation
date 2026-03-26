@@ -4,11 +4,11 @@ import { use, useState } from "react"
 
 export default function Home() {
   const [formData, setFormData] = useState({name: "", gender: ""});
-  const handleChange=(e)=>{
+  const handleChange=(e:any)=>{
     const {name, value} = e.target;
     setFormData((prev) => ({...prev, [name]: value}));
   }
-  const handleSubmit=(e)=>{
+  const handleSubmit=(e:any)=>{
     e.preventDefault();
     alert(`Welcome ${formData.name}, you are invited to the Vastu poojan!`);
   }
