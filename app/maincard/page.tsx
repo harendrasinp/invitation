@@ -1,12 +1,12 @@
 const page = () => {
   return (
-    <div>
+    <div  className="w-full h-screen">
         <video
       autoPlay
       muted
       loop
       playsInline
-      width="400"
+      className="w-full h-full object-cover"
     >
       <source src="images/fram.mp4" type="video/mp4" />
     </video>
