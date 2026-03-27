@@ -29,7 +29,7 @@ const Page = () => {
 
       {/* 🔊 Music */}
       <audio ref={audioRef} loop>
-        <source src="/music/song.mp3" type="audio/mp3" />
+        <source src="/sound/bgsound.mp3" type="audio/mp3" />
       </audio>
 
       {/* ✨ Overlay Text */}
