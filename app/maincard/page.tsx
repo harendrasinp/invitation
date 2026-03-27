@@ -5,11 +5,11 @@ import { DataContext } from "@/contaxtAPI/contextApi";
 
 const Page = () => {
   const { userName, gender } = useContext(DataContext);
-  const audioRef = useRef(null);
+  const audioRef = useRef<any>(null);
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.play().catch(() => {});
+        audioRef.current.play().catch(() => { })
     }
   }, []);
 
