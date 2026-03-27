@@ -1,21 +1,21 @@
 "use client"
-import { use, useState } from "react"
+import { useContext } from "react";
+import { useState } from "react"
 import { useRouter } from "next/navigation";
+import { DataContext } from "../contaxtAPI/contextApi";
 
 export default function Home() {
-  const [formData, setFormData] = useState({ name: "", gender: "" });
+
   const router = useRouter();
-  const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  }
+  const [localName, setLocalName] = useState("");
+  const [localGender, setLocalGender] = useState("");
+  const {setUserName, setGender } = useContext(DataContext);
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    setUserName(localName);
+    setGender(localGender);
     router.push("/maincard")
-    setFormData({
-      name: "",
-      gender: "",
-    });
+  
   }
   return (
     <div className="h-screen w-full p-2">
@@ -29,16 +29,16 @@ export default function Home() {
           <input type="text" className="mt-1 p-1 border border-gray-300 rounded-lg w-full max-w-sm"
             placeholder="Your Name"
             name="name"
-            value={formData.name}
-            onChange={handleChange} />
+            value={localName}
+            onChange={(e) => setLocalName(e.target.value)} />
           <div>
             <label className="block mt-2 text-sm text-gray-700">
               <input
                 type="radio"
                 name="gender"
                 value="male"
-                checked={formData.gender === "male"}
-                onChange={handleChange} /> Male
+                checked={localGender === "male"}
+                onChange={(e) => setLocalGender(e.target.value)} /> Male
             </label>
 
             <label className="block mt-2 text-sm text-gray-700">
@@ -46,8 +46,8 @@ export default function Home() {
                 type="radio"
                 name="gender"
                 value="female"
-                checked={formData.gender === "female"}
-                onChange={handleChange} /> Female
+                checked={localGender === "female"}
+                onChange={(e) => setLocalGender(e.target.value)} /> Female
             </label>
           </div>
           <button type="submit" className="mt-2 px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-pink-700 transition duration-300">Open Invitation</button>
