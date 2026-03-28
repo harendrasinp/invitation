@@ -41,36 +41,35 @@ const Page = () => {
       {/* -------------------------name of user--------------------------------------- */}
       {/* ✨ Overlay Text */}
       <motion.div
-        className="relative w-full overflow-hidden h-80 mt-10 flex items-center justify-center"
+        className="absolute w-full mt-12 flex items-center justify-center overflow-hidden"
         initial={{ height: 0 }}
         animate={{ height: 350 }}
         transition={{ duration: 2, ease: "easeInOut" }}
       >
-        {/* 📩 Letter Image */}
-        <img
-          src="/images/latter1.png"
-          alt="latter-image"
-          className="w-[600px] h-auto object-contain"
-        />
+        <div className="relative flex items-center justify-center">
 
-        {/* ✨ Text (inside letter) */}
-        <motion.div
-          className="absolute flex items-center justify-center w-full h-full px-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 1 }} // 👈 delay important
-        >
-          <div className="text-orange-200 text-[1.2rem] p-2 font-semibold font-dancing text-center rounded-xl w-55">
-            <p>Namashkar </p>
-            <p>
-              {prefix} <span className="text-white">{userName}</span>
-            </p>
-            <p>
-              We are excited to invite you to our Housewarming Ceremony (Griha Pravesh).
-              Your presence will add joy to our celebration.
-            </p>
+          {/* 📩 Letter Image */}
+          <img
+            src="/images/latter1.png"
+            alt="latter-image"
+            className="w-[500px] h-auto object-contain"
+          />
+
+          {/* ✨ Text (NO animation here ❗) */}
+          <div className="absolute flex items-center justify-center w-full h-full px-6">
+            <div className="text-orange-200 text-[1.2rem] p-2 font-semibold font-dancing text-center rounded-xl w-55">
+              <p>Namashkar </p>
+              <p>
+                {prefix} <span className="text-white">{userName}</span>
+              </p>
+              <p>
+                We are excited to invite you to our Housewarming Ceremony (Griha Pravesh).
+                Your presence will add joy to our celebration.
+              </p>
+            </div>
           </div>
-        </motion.div>
+
+        </div>
       </motion.div>
       {/* -------------------------address----------------------------- */}
       <div className="absolute flex flex-col justify-center items-center bottom-10 w-full">
