@@ -9,24 +9,26 @@ export default function Home() {
   const router = useRouter();
   const [localName, setLocalName] = useState("");
   const [localGender, setLocalGender] = useState("");
-  const {setUserName, setGender } = useContext(DataContext);
+  const { setUserName, setGender } = useContext(DataContext);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    if(!localName || !localGender) {
+    if (!localName || !localGender) {
       alert("Please enter your name and select your gender");
       return;
     }
     setUserName(localName);
     setGender(localGender);
     router.push("/maincard")
-  
+
   }
   return (
     <div className="h-screen w-full p-2">
+      {/* -----------------------ganesh ji image-------------------------------*/}
       <div className="h-100 w-full bg-cover bg-center"
         style={{ backgroundImage: "url('/images/ganeshji2.png')" }}></div>
-       <div className="flex flex-col items-center justify-center mt-1">
+      {/* -------------------------form and title area----------------------------- */}
+      <div className="flex flex-col items-center justify-center mt-1 ">
         <h1 className="text-4xl text-pink-800 mb-1 font-great-vibes">Vastu poojan</h1>
         <p className="text-orange-500 mb-2 font-dancing text-2xl text-center">Join us for the inauguration of our new House.</p>
         {/* ---------------------------Form---------------------------- */}
