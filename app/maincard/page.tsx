@@ -51,7 +51,7 @@ const Page = () => {
           <p className="text-gray-800 text-center">74,shivshakti park society,near Chaudhari samaj vadi ,musa road</p>
         </div>
          <div className="border-[6px] border-gray-800/60 rounded-lg p-2">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10528.465593096736!2d73.38571250251644!3d21.09762227475814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be07f80c2ec6345%3A0xddad74394e2241a2!2sShiv%20Shakti%20Park%2CMusa%20Road!5e0!3m2!1sen!2sin!4v1774701008053!5m2!1sen!2sin" width="200" height="100"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10528.465593096736!2d73.38571250251644!3d21.09762227475814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be07f80c2ec6345%3A0xddad74394e2241a2!2sShiv%20Shakti%20Park%2CMusa%20Road!5e0!3m2!1sen!2sin!4v1774701008053!5m2!1sen!2sin" width="250" height="100"></iframe>
         </div>
       </div>
       {/* -------------------------bottom----------------------------- */}
