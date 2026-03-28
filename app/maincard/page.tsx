@@ -40,15 +40,13 @@ const Page = () => {
       </div>
       {/* -------------------------name of user--------------------------------------- */}
       {/* ✨ Overlay Text */}
-      <motion.div className="absolute h-80 w-full  flex items-center justify-center overflow-hidden"
-       >
-        <img src="/images/latter1.png" alt="latter-image" className="w-100 h-60" />
+      <motion.div className="absolute mt-10 h-80 w-full  flex items-center justify-center overflow-hidden">
+        <img src="/images/latter1.png" alt="latter-image" className="w-150 h-80" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-orange-200 text-[1.2rem] font-dancing text-center px-6 py-3 rounded-xl w-50">
-            {/* {userName? `Hello ${gender === "male" ? "Mr." : "Miss"} ${userName},`: "Oops"} */}
+          <div className="text-orange-200 text-[1.2rem] font-dancing text-center px-6 py-3 rounded-xl w-55">
             <p>Namashkar </p>
             <p>{prefix} {userName}</p>
-            <p>you are invited to the Vastu poojan</p>
+            <p>We are excited to invite you to our Housewarming Ceremony (Griha Pravesh).Your presence will add joy to our celebration.</p>
           </div>
         </div>
       </motion.div>
