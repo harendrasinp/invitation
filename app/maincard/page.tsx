@@ -45,7 +45,7 @@ const Page = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-orange-200 text-[1.2rem] font-dancing text-center px-6 py-3 rounded-xl w-55">
             <p>Namashkar </p>
-            <p>{prefix} {userName}</p>
+            <p>{prefix} <span className="text-orange-400">{userName}</span></p>
             <p>We are excited to invite you to our Housewarming Ceremony (Griha Pravesh).Your presence will add joy to our celebration.</p>
           </div>
         </div>
