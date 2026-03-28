@@ -41,7 +41,23 @@ const Page = () => {
       {/* -------------------------name of user--------------------------------------- */}
       {/* ✨ Overlay Text */}
       <motion.div
-        className="absolute w-full mt-8 flex items-center justify-center overflow-hidden"
+        className="h-12 absolute top-34 w-full flex items-center justify-center overflow-hidden"
+      >
+        <motion.h1
+          className="text-[1.2rem] text-pink-800 font-great-vibes whitespace-nowrap"
+          initial={{ x: "100%" }}   // right side se start
+          animate={{ x: "-100%" }}  // left side tak jayega
+          transition={{
+            duration: 15,            // speed control
+            ease: "linear",
+            repeat: Infinity        // loop karega
+          }}
+        >
+         <p>वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</p> 
+        </motion.h1>
+      </motion.div>
+      <motion.div
+        className="absolute w-full mt-10 flex items-center justify-center overflow-hidden"
         initial={{ height: 0 }}
         animate={{ height: 350 }}
         transition={{ duration: 2, ease: "easeInOut" }}>
