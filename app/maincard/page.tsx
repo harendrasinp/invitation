@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Page = () => {
   const { userName, gender } = useContext(DataContext);
   const audioRef = useRef<any>(null);
-
+  const prefix = gender === "Male" ? "Mr." : "Ms."
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.play().catch(() => { })
@@ -15,8 +15,8 @@ const Page = () => {
 
   return (
     <motion.div className="w-full h-200 relative overflow-hidden"
-      initial={{ opacity: 0, y: -100 }}   
-      animate={{ opacity: 1, y: 0 }}      
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}>
 
       {/* 🎥 Background Video */}
@@ -40,17 +40,16 @@ const Page = () => {
       </div>
       {/* -------------------------name of user--------------------------------------- */}
       {/* ✨ Overlay Text */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 80, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="text-white text-3xl font-bold text-center bg-black/40 px-6 py-3 rounded-xl"
-        >
-          {userName
-            ? `Hello ${gender === "male" ? "Mr." : "Miss"} ${userName}, you are invited to the Vastu poojan`
-            : "Oops"}
-        </motion.h1>
+      <div className="absolute h-80 w-full  flex items-center justify-center overflow-hidden"
+       >
+        <img src="/images/latter1.png" alt="latter-image" className="w-100 h-60" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-orange-200 text-[1.2rem] font-dancing text-center px-6 py-3 rounded-xl w-50">
+            {/* {userName? `Hello ${gender === "male" ? "Mr." : "Miss"} ${userName},`: "Oops"} */}
+            <p>Namashkar {prefix} {userName}</p>
+            <p>you are invited to the Vastu poojan</p>
+          </div>
+        </div>
       </div>
       {/* -------------------------address----------------------------- */}
       <div className="absolute flex flex-col justify-center items-center bottom-10 w-full">
