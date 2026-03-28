@@ -46,8 +46,8 @@ const Page = () => {
       </div>
       {/* -------------------------address----------------------------- */}
       <div className="absolute flex flex-col justify-center items-center bottom-10 w-full">
-        <div className="flex flex-col  items-center w-66 bg-amber-100/20 backdrop-blur-lg rounded-2xl mb-1 border-2 border-amber-500">
-          <p className="text-gray-700 font-semibold">Our New Addreass</p>
+        <div className="flex flex-col  items-center w-66 bg-amber-100/20 backdrop-blur-lg rounded-2xl mb-1 border-2 border-amber-500/60">
+          <p className="text-gray-700 sm:font-semibold">Our New Addreass</p>
           <p className="text-gray-800 text-center">74,shivshakti park society,near Chaudhari samaj vadi ,musa road</p>
         </div>
          <div className="border-[6px] border-gray-800/60 rounded-lg p-2">
