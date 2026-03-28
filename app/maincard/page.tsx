@@ -40,15 +40,37 @@ const Page = () => {
       </div>
       {/* -------------------------name of user--------------------------------------- */}
       {/* ✨ Overlay Text */}
-      <motion.div className="absolute mt-10 w-full  flex items-center justify-center">
-        <img src="/images/latter1.png" alt="latter-image"className="w-[500px] h-auto object-contain"/>
-        <div className="absolute inset-0 flex items-center justify-center">
+      <motion.div
+        className="relative w-full overflow-hidden h-80 mt-10 flex items-center justify-center"
+        initial={{ height: 0 }}
+        animate={{ height: 350 }}
+        transition={{ duration: 2, ease: "easeInOut" }}
+      >
+        {/* 📩 Letter Image */}
+        <img
+          src="/images/latter1.png"
+          alt="latter-image"
+          className="w-[600px] h-auto object-contain"
+        />
+
+        {/* ✨ Text (inside letter) */}
+        <motion.div
+          className="absolute flex items-center justify-center w-full h-full px-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 1 }} // 👈 delay important
+        >
           <div className="text-orange-200 text-[1.2rem] p-2 font-semibold font-dancing text-center rounded-xl w-55">
             <p>Namashkar </p>
-            <p>{prefix} <span className="text-white">{userName}</span></p>
-            <p>We are excited to invite you to our Housewarming Ceremony (Griha Pravesh).Your presence will add joy to our celebration.</p>
+            <p>
+              {prefix} <span className="text-white">{userName}</span>
+            </p>
+            <p>
+              We are excited to invite you to our Housewarming Ceremony (Griha Pravesh).
+              Your presence will add joy to our celebration.
+            </p>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
       {/* -------------------------address----------------------------- */}
       <div className="absolute flex flex-col justify-center items-center bottom-10 w-full">
