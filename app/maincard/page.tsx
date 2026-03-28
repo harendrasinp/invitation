@@ -40,7 +40,7 @@ const Page = () => {
       <div className="absolute inset-0 flex items-center justify-center">
         <h1 className="text-white text-3xl font-bold text-center bg-black/40 px-6 py-3 rounded-xl">
           {userName
-            ? `Hello ${gender === "male" ? "Mr." : "Miss"} ${userName}, you are invited to the poojan`
+            ? `Hello ${gender === "male" ? "Mr." : "Miss"} ${userName}, you are invited to the Vastu poojan`
             : "Oops"}
         </h1>
       </div>
