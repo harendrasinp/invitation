@@ -46,7 +46,8 @@ const Page = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-orange-200 text-[1.2rem] font-dancing text-center px-6 py-3 rounded-xl w-50">
             {/* {userName? `Hello ${gender === "male" ? "Mr." : "Miss"} ${userName},`: "Oops"} */}
-            <p>Namashkar {prefix} {userName}</p>
+            <p>Namashkar </p>
+            <p>{prefix} {userName}</p>
             <p>you are invited to the Vastu poojan</p>
           </div>
         </div>
