@@ -31,6 +31,9 @@ const Page = () => {
       <audio ref={audioRef} loop>
         <source src="/sound/bgsound.mp3" type="audio/mp3" />
       </audio>
+      <div className="flex justify-center items-center mt-20">
+        <img src="/images/g1.png" alt="Ganeshji" className="absolute w-32 h-32 object-contain" />
+      </div>
 
       {/* ✨ Overlay Text */}
       <div className="absolute inset-0 flex items-center justify-center">

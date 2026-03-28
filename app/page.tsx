@@ -10,8 +10,13 @@ export default function Home() {
   const [localName, setLocalName] = useState("");
   const [localGender, setLocalGender] = useState("");
   const {setUserName, setGender } = useContext(DataContext);
+
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    if(!localName || !localGender) {
+      alert("Please enter your name and select your gender");
+      return;
+    }
     setUserName(localName);
     setGender(localGender);
     router.push("/maincard")
