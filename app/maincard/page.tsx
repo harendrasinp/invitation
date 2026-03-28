@@ -29,7 +29,7 @@ const Page = () => {
 
       {/* 🔊 Music */}
       <audio ref={audioRef} loop>
-        <source src="/sound/bgsound.mp3" type="audio/mp3" />
+        <source src="/sound/bgsound2.mp3" type="audio/mp3" />
       </audio>
       {/* -------------------------ganesh ji top image----------------------------- */}
       <div className="flex justify-center items-center mt-20">
