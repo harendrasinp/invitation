@@ -41,22 +41,21 @@ const Page = () => {
       {/* -------------------------name of user--------------------------------------- */}
       {/* ✨ Overlay Text */}
       <motion.div
-        className="absolute w-full mt-12 flex items-center justify-center overflow-hidden"
+        className="absolute w-full mt-8 flex items-center justify-center overflow-hidden"
         initial={{ height: 0 }}
         animate={{ height: 350 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
-      >
-        <div className="relative flex items-center justify-center">
+        transition={{ duration: 2, ease: "easeInOut" }}>
+        <div className="flex items-center justify-center w-full h-full">
 
           {/* 📩 Letter Image */}
           <img
             src="/images/latter1.png"
             alt="latter-image"
-            className="w-[500px] h-auto object-contain"
+            className="w-[650px] h-[300px]"
           />
 
           {/* ✨ Text (NO animation here ❗) */}
-          <div className="absolute flex items-center justify-center w-full h-full px-6">
+          <div className="absolute flex items-center justify-center w-full h-full">
             <div className="text-orange-200 text-[1.2rem] p-2 font-semibold font-dancing text-center rounded-xl w-55">
               <p>Namashkar </p>
               <p>
