@@ -119,11 +119,11 @@ const Page = () => {
         </motion.div>
         {/* ⏳ Countdown Timer */}
         <div className="mt-8 text-center bg-black/20 backdrop-blur-[5px] px-6 py-4 rounded-xl">
-          <h2 className="text-xl mb-3 text-pink-900">
-            Date:<span className="text-pink-900 font-bold"> 23/04/2026 તિથિ-વૈશાખ સુદ  સાતમ</span>
+          <h2 className="mb-3 text-pink-900">
+            Date:<span className="text-pink-900 font-bold"> 23/04/2026, તિથિ-વૈશાખ સુદ  સાતમ</span>
           </h2>
 
-          <div className="flex gap-6 text-lg text-yellow-200">
+          <div className="flex gap-6  text-yellow-200">
             <div>
               <p>{timeLeft.days}</p>
               <span className="text-xl mb-3 text-pink-900">Days</span>
