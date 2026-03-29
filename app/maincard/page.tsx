@@ -146,7 +146,7 @@ const Page = () => {
         {/* 📍 Address */}
         <div className="mt-10 flex flex-col items-center">
           <div className="bg-amber-100/20 backdrop-blur-md rounded-xl border border-amber-400 px-4 py-2 text-center">
-            <p className="text-pink-800 font-semibold">Our New Address</p>
+            <p className="text-pink-800 font-bold">Our New Address</p>
             <p className="text-pink-800 text-sm">
               74, Shivshakti Park Society, Near Chaudhari Samaj Vadi, Musa Road
             </p>
