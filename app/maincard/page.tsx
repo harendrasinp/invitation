@@ -90,9 +90,8 @@ const Page = () => {
           className=" w-full  flex items-center justify-center overflow-hidden"
           initial={{ height: 0 }}
           animate={{ height:325 }}
-          transition={{ duration: 2, ease: "easeInOut" }}
-        >
-          <div className="flex items-center justify-center w-full h-auto">
+          transition={{ duration: 2, ease: "easeInOut" }}>
+          <div className=" relative flex items-center justify-center w-full h-auto">
 
             {/* 📩 Letter Image */}
             <img
