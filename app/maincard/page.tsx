@@ -138,7 +138,7 @@ const Page = () => {
         <div className="text-center ">
           <p className="text-pink-900 font-bold text-sm">Invited By</p>
           <div className="overflow-hidden">
-            <motion.div className="text-pink-800 whitespace-nowrap text-lg overflow-hidden"
+            <motion.div className="text-pink-800 whitespace-nowrap text-lg overflow-hidden font-dancing"
               initial={{ y: "100%" }}
               animate={{ y: "-30%" }}
               transition={{ duration: 12, ease: "linear", repeat: Infinity }}>
