@@ -109,7 +109,7 @@ useEffect(() => {
             <img
               src="/images/latter1.png"
               alt="latter-image"
-              className="w-80 h-auto object-contain"
+              className="w-96 h-85"
             />
 
             <div className="absolute flex items-center justify-center w-full h-full">
