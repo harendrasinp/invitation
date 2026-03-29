@@ -17,7 +17,7 @@ const Page = () => {
   }, []);
 
   // ⏳ Countdown Timer
-  const targetDate = new Date("2026-04-23T00:00:00").getTime();
+  const targetDate = new Date("2026-04-23T08:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
