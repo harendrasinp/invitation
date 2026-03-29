@@ -140,7 +140,7 @@ const Page = () => {
           <div className="overflow-hidden">
             <motion.div className="text-pink-800 whitespace-nowrap text-lg overflow-hidden font-dancing"
               initial={{ y: "100%" }}
-              animate={{ y: "-30%" }}
+              animate={{ y: "-100%" }}
               transition={{ duration: 12, ease: "linear", repeat: Infinity }}>
               <p>Ankur.U.chaudhary</p>
               <p>Urvashi.U.chaudhary</p>
