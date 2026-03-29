@@ -59,7 +59,7 @@ useEffect(() => {
 
   return (
     <div className="relative w-full min-h-screen text-white">
-      <div className="absolute top-[-9.5rem] w-100 ml-[-0.5rem]">
+      <div className="absolute top-[-9.7rem] w-104 ml-[-0.9rem]">
         <img src="images/flower.png" alt="flower image" className="w-120 h-96" />
       </div>
       {/* 🎥 Background Video (FIXED ✅) */}
