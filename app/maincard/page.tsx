@@ -10,24 +10,24 @@ const Page = () => {
   const prefix = gender === "Male" ? "Mr." : "Ms.";
 
   // 🔊 Audio autoplay
-useEffect(() => {
-  const shouldPlay = localStorage.getItem("playMusic");
+  useEffect(() => {
+    const shouldPlay = localStorage.getItem("playMusic");
 
-  if (shouldPlay === "true" && audioRef.current) {
-    audioRef.current.play().catch(() => {});
-  }
+    if (shouldPlay === "true" && audioRef.current) {
+      audioRef.current.play().catch(() => { });
+    }
 
-  const playOnClick = () => {
-    audioRef.current?.play().catch(() => {});
-    document.removeEventListener("click", playOnClick);
-  };
+    const playOnClick = () => {
+      audioRef.current?.play().catch(() => { });
+      document.removeEventListener("click", playOnClick);
+    };
 
-  document.addEventListener("click", playOnClick);
+    document.addEventListener("click", playOnClick);
 
-  return () => {
-    document.removeEventListener("click", playOnClick);
-  };
-}, []);
+    return () => {
+      document.removeEventListener("click", playOnClick);
+    };
+  }, []);
 
   // ⏳ Countdown Timer
   const targetDate = new Date("2026-04-23T08:00:00").getTime();
@@ -134,12 +134,26 @@ useEffect(() => {
         <div>
           <img src="/images/family.png" alt="family photo" width={500} />
         </div>
-
+        {/* ---------------------------------Invited by-------------------- */}
+        <div className="text-center ">
+          <p className="text-pink-900 font-bold text-sm">Invited By</p>
+          <div className="overflow-hidden">
+            <motion.div className="text-pink-800 whitespace-nowrap text-lg overflow-hidden"
+              initial={{ y: "100%" }}
+              animate={{ y: "-30%" }}
+              transition={{ duration: 12, ease: "linear", repeat: Infinity }}>
+              <p>Ankur.U.chaudhary</p>
+              <p>Urvashi.U.chaudhary</p>
+              <p>Dhuti.A.chaudhary</p>
+              <p>Mivan.A.chaudhary</p>
+            </motion.div>
+          </div>
+        </div>
         {/* ⏳ Countdown Timer */}
         <div className="mt-8 text-center bg-black/20 backdrop-blur-[5px] px-6 py-4 rounded-xl">
-          <h2 className="mb-3 text-pink-900">
+          <div className="mb-3 text-pink-900">
             Date:<span className="text-pink-900 font-bold font-dancing"> 23/04/2026, તિથિ-વૈશાખ સુદ  સાતમ</span>
-          </h2>
+          </div>
 
           <div className="flex gap-6  text-yellow-200">
             <div>
