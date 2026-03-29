@@ -64,7 +64,7 @@ const Page = () => {
       </audio>
 
       {/* 🌟 Main Content */}
-      <div className="relative z-10 flex flex-col items-center px-4">
+      <div className="relative z-10 flex flex-col items-center">
 
         {/* 🪔 Ganesh Image */}
         <img
@@ -87,23 +87,23 @@ const Page = () => {
 
         {/* 📩 Letter Section */}
         <motion.div
-          className=" w-full mt-1 flex items-center justify-center overflow-hidden"
+          className=" w-full  flex items-center justify-center overflow-hidden"
           initial={{ height: 0 }}
-          animate={{ height: 280 }}
+          animate={{ height:280 }}
           transition={{ duration: 2, ease: "easeInOut" }}
         >
-          <div className="relative flex items-center justify-center">
+          <div className="flex items-center justify-center w-full h-auto">
 
             {/* 📩 Letter Image */}
             <img
               src="/images/latter1.png"
               alt="latter-image"
-              className="w-[600px] h-[300px] "
+              className="w-96 h-[300px]"
             />
 
             {/* ✨ Text (NO animation here ❗) */}
-            <div className="absolute flex items-center justify-center w-full h-full px-6">
-              <div className="text-orange-200 text-[1.2rem] p-2 font-semibold font-dancing text-center rounded-xl w-55">
+            <div className="absolute flex items-center justify-center w-full h-full">
+              <div className="text-orange-200 text-[1.2rem] font-semibold font-dancing text-center rounded-xl w-48">
                 <p>Namashkar </p>
                 <p>
                   {prefix} <span className="text-white">{userName}</span>
