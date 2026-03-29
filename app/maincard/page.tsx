@@ -12,7 +12,7 @@ const Page = () => {
   // 🔊 Audio autoplay
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.play().catch(() => { });
+      audioRef.current.play().catch(() => {});
     }
   }, []);
 
@@ -45,15 +45,15 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden text-white">
+    <div className="relative w-full min-h-screen text-white">
 
-      {/* 🎥 Background Video */}
+      {/* 🎥 Background Video (FIXED ✅) */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="fixed top-0 left-0 w-full h-full object-cover -z-10"
       >
         <source src="/images/fram.mp4" type="video/mp4" />
       </video>
@@ -88,19 +88,16 @@ const Page = () => {
         {/* 📩 Letter Section */}
         <motion.div
           className=" w-full  flex items-center justify-center overflow-hidden"
-          initial={{ height: 0 }}
-          animate={{ height: 325 }}
+          initial={{ height: 20 }}
+          animate={{ height: 352 }}
           transition={{ duration: 2, ease: "easeInOut" }}>
           <div className=" relative flex items-center justify-center w-full h-auto">
 
-            {/* 📩 Letter Image */}
             <img
               src="/images/latter1.png"
               alt="latter-image"
-              className="w-96 h-[350px]"
             />
 
-            {/* ✨ Text (NO animation here ❗) */}
             <div className="absolute flex items-center justify-center w-full h-full">
               <div className="text-orange-200 text-[1.2rem] font-semibold font-dancing text-center rounded-xl w-48">
                 <p>Namashkar </p>
@@ -117,9 +114,11 @@ const Page = () => {
 
           </div>
         </motion.div>
+
         <div>
-          <img src="/images/family.png" alt="family photo" />
+          <img src="/images/family.png" alt="family photo" width={500} />
         </div>
+
         {/* ⏳ Countdown Timer */}
         <div className="mt-8 text-center bg-black/20 backdrop-blur-[5px] px-6 py-4 rounded-xl">
           <h2 className="mb-3 text-pink-900">
@@ -163,10 +162,12 @@ const Page = () => {
             ></iframe>
           </div>
         </div>
+
         <div className="w-full bg-blue-950/60 backdrop-blur-md p-1 text-center mt-1 text-[0.8rem]">
-        <p>© 2026 VayuSoftware | Harendrasinh Parmar </p>
-        <p>Contact:+91-9867775626</p>
+          <p>© 2026 VayuSoftware | Harendrasinh Parmar </p>
+          <p>Contact:+91-9867775626</p>
         </div>
+
       </div>
     </div>
   );
