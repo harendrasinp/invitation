@@ -19,6 +19,7 @@ export default function Home() {
     }
     setUserName(localName);
     setGender(localGender);
+    localStorage.setItem("playMusic", "true");
     router.push("/maincard")
 
   }

@@ -10,11 +10,24 @@ const Page = () => {
   const prefix = gender === "Male" ? "Mr." : "Ms.";
 
   // 🔊 Audio autoplay
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.play().catch(() => {});
-    }
-  }, []);
+useEffect(() => {
+  const shouldPlay = localStorage.getItem("playMusic");
+
+  if (shouldPlay === "true" && audioRef.current) {
+    audioRef.current.play().catch(() => {});
+  }
+
+  const playOnClick = () => {
+    audioRef.current?.play().catch(() => {});
+    document.removeEventListener("click", playOnClick);
+  };
+
+  document.addEventListener("click", playOnClick);
+
+  return () => {
+    document.removeEventListener("click", playOnClick);
+  };
+}, []);
 
   // ⏳ Countdown Timer
   const targetDate = new Date("2026-04-23T08:00:00").getTime();
