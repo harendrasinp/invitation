@@ -89,7 +89,7 @@ const Page = () => {
         <motion.div
           className=" w-full  flex items-center justify-center overflow-hidden"
           initial={{ height: 0 }}
-          animate={{ height:325 }}
+          animate={{ height: 325 }}
           transition={{ duration: 2, ease: "easeInOut" }}>
           <div className=" relative flex items-center justify-center w-full h-auto">
 
@@ -160,7 +160,10 @@ const Page = () => {
             ></iframe>
           </div>
         </div>
-
+        <div className="w-full bg-blue-950/60 backdrop-blur-md p-1 text-center mt-1 text-[0.8rem]">
+        <p>© 2026 VayuSoftware | Harendrasinh Parmar </p>
+        <p>Contact:+91-9867775626</p>
+        </div>
       </div>
     </div>
   );
