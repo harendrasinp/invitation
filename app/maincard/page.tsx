@@ -89,7 +89,7 @@ const Page = () => {
         <motion.div
           className=" w-full  flex items-center justify-center overflow-hidden"
           initial={{ height: 0 }}
-          animate={{ height:280 }}
+          animate={{ height:325 }}
           transition={{ duration: 2, ease: "easeInOut" }}
         >
           <div className="flex items-center justify-center w-full h-auto">
@@ -112,6 +112,7 @@ const Page = () => {
                   We are excited to invite you to our Housewarming Ceremony (Griha Pravesh).
                   Your presence will add joy to our celebration.
                 </p>
+                <p className="text-white"> Ankur.U.chaudhary</p>
               </div>
             </div>
 
