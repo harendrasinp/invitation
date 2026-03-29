@@ -98,7 +98,7 @@ const Page = () => {
             <img
               src="/images/latter1.png"
               alt="latter-image"
-              className="w-96 h-[320px]"
+              className="w-96 h-[350px]"
             />
 
             {/* ✨ Text (NO animation here ❗) */}
