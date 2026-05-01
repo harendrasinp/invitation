@@ -73,6 +73,27 @@ const Page = () => {
 
     return () => clearTimeout(timer);
   }, []);
+  // ------------------------------Auto Scroll-------------------------------
+useEffect(() => {
+  const delay = setTimeout(() => {
+    let scrollInterval = setInterval(() => {
+      window.scrollBy(0, 1); // smooth slow scroll
+
+      // bottom pe stop
+      if (
+        window.innerHeight + window.scrollY >=
+        document.body.scrollHeight
+      ) {
+        clearInterval(scrollInterval);
+      }
+    }, 30); // speed control
+
+    // cleanup
+    return () => clearInterval(scrollInterval);
+  }, 3000); // ⏱️ delay (3000ms = 3 sec)
+
+  return () => clearTimeout(delay);
+}, []);
   return (
     <div className="relative w-full min-h-screen text-white">
       <div className="absolute top-[-9.7rem] w-104 ml-[-0.9rem]">
