@@ -9,28 +9,6 @@ const Page = () => {
   const { userName, gender } = useContext(DataContext);
   // const audioRef = useRef<any>(null);
   const prefix = gender === "Male" ? "Mr." : "Ms.";
-
-  // 🔊 Audio autoplay
-  // useEffect(() => {
-  //   const shouldPlay = localStorage.getItem("playMusic");
-
-  //   if (shouldPlay === "true" && audioRef.current) {
-  //     audioRef.current.play().catch(() => { });
-  //   }
-
-  //   const playOnClick = () => {
-  //     audioRef.current?.play().catch(() => { });
-  //     document.removeEventListener("click", playOnClick);
-  //   };
-
-  //   document.addEventListener("click", playOnClick);
-
-  //   return () => {
-  //     document.removeEventListener("click", playOnClick);
-  //   };
-  // }, []);
-
-  // ⏳ Countdown Timer
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -97,10 +75,6 @@ const Page = () => {
   }, []);
   return (
     <div className="relative w-full min-h-screen text-white">
-      {/* 🔊 Audio */}
-      {/* <audio ref={audioRef} loop>
-        <source src="/sound/bgsound2.mp3" type="audio/mp3" />
-      </audio> */}
       <div className="absolute top-[-9.7rem] w-104 ml-[-0.9rem]">
         <img src="images/flower.png" alt="flower image" className="w-120 h-96" />
       </div>
