@@ -142,10 +142,10 @@ const Page = () => {
               initial={{ y: "100%" }}
               animate={{ y: "-100%" }}
               transition={{ duration: 12, ease: "linear", repeat: Infinity }}>
-              <p>Ankur.U.chaudhary</p>
-              <p>Urvashi.U.chaudhary</p>
-              <p>Dhuti.A.chaudhary</p>
-              <p>Mivan.A.chaudhary</p>
+              <p>Ankur.U.chaudhari</p>
+              <p>Urvashi.U.chaudhari</p>
+              <p>Dhuti.A.chaudhari</p>
+              <p>Mivan.A.chaudhari</p>
             </motion.div>
           </div>
         </div>
