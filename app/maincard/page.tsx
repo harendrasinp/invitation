@@ -36,7 +36,7 @@ const Page = () => {
     minutes: 0,
     seconds: 0,
   });
-  const targetDate = new Date(2026, 4, 5, 11, 0, 0);
+ const targetDate = new Date(2026, 4, 4, 8, 0, 0);
   const format = (num: number): string => String(num).padStart(2, "0");
   useEffect(() => {
     const timer = setInterval(() => {
@@ -182,7 +182,7 @@ const Page = () => {
         {/* ⏳ Countdown Timer */}
         <div className="mt-8 text-center bg-black/20 backdrop-blur-[5px] px-6 py-4 rounded-xl">
           <div className="mb-3 text-pink-900">
-            Date:<span className="text-pink-900 font-bold font-dancing"> 23/04/2026, તિથિ-વૈશાખ સુદ  સાતમ</span>
+            Date:<span className="text-pink-900 font-bold font-dancing"> 04/05/2026, તિથિ-વૈશાખ સુદ  સાતમ</span>
           </div>
 
           <div className="flex gap-6  text-yellow-200">
