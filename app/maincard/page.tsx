@@ -3,8 +3,9 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { DataContext } from "@/contaxtAPI/contextApi";
 import { motion } from "framer-motion";
-
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 const Page = () => {
+  const [showFlower, setShowFlower] = useState(false);
   const { userName, gender } = useContext(DataContext);
   const audioRef = useRef<any>(null);
   const prefix = gender === "Male" ? "Mr." : "Ms.";
@@ -86,7 +87,14 @@ const Page = () => {
 
     return () => clearInterval(timer);
   }, []);
+  // ------------------------------Flower Animation on Click-------------------------------
+  useEffect(() => {
+    const timer= setTimeout(() => {
+      setShowFlower(true);
+    }, 1000); // 5 seconds delay
 
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className="relative w-full min-h-screen text-white">
       <div className="absolute top-[-9.7rem] w-104 ml-[-0.9rem]">
@@ -154,7 +162,7 @@ const Page = () => {
                   We are excited to invite you to our Housewarming Ceremony (Griha Pravesh).
                   Your presence will add joy to our celebration.
                 </p>
-                <p className="text-white"> Ankur.U.chaudhary</p>
+                <p className="text-white"> Ankur.U.chaudhari</p>
               </div>
             </div>
 
@@ -178,6 +186,9 @@ const Page = () => {
               <p>Mivan.A.chaudhari</p>
             </motion.div>
           </div>
+        </div>
+        <div className="border-4 border-gray-800">
+          <img src="/images/home1.png" alt="family photo" width={250} />
         </div>
         {/* ⏳ Countdown Timer */}
         <div className="mt-8 text-center bg-black/20 backdrop-blur-[5px] px-6 py-4 rounded-xl">
@@ -229,6 +240,24 @@ const Page = () => {
         </div>
 
       </div>
+      {/* -----------------------------animation ------------------------------- */}
+      {showFlower && (
+        <DotLottieReact
+          src="https://lottie.host/577a639a-d5d6-4107-9f6b-8a601b772fe5/hEXNKn4fUY.lottie"
+          loop
+          autoplay
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: 50,
+            pointerEvents: "none",
+            opacity: 0.8,
+          }}
+        />
+      )}
     </div>
   );
 };
