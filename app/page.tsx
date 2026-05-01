@@ -111,7 +111,7 @@ export default function Home() {
         </p>
 
         {/* ---------------------------Form---------------------------- */}
-        <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center bg-amber-400">
+        <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center">
           <input
             type="text"
             className="mt-1 p-1 border border-gray-300 rounded-lg w-full max-w-sm"
