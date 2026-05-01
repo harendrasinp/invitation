@@ -90,7 +90,7 @@ useEffect(() => {
 
     // cleanup
     return () => clearInterval(scrollInterval);
-  }, 3000); // ⏱️ delay (3000ms = 3 sec)
+  }, 5000); // ⏱️ delay (5000ms = 5 sec)
 
   return () => clearTimeout(delay);
 }, []);

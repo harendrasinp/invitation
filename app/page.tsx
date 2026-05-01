@@ -28,9 +28,7 @@ export default function Home() {
 
     localStorage.setItem("playMusic", "true");
 
-       setTimeout(() => {
-      router.push("/maincard");
-    }, 800); // 0.8 sec delay
+    router.push("/maincard");
   }
 
   return (
