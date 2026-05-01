@@ -98,7 +98,7 @@ export default function Home() {
   }
 
   return (
-    <div className="h-screen w-full p-2">
+    <div className="h-screen w-full p-2 border-4 border-gray-800">
       {/* -----------------------ganesh ji image-------------------------------*/}
       <div className="h-100 w-full bg-cover bg-center"
         style={{ backgroundImage: "url('/images/ganeshji2.png')" }}></div>
