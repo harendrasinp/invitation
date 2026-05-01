@@ -98,7 +98,7 @@ export default function Home() {
   }
 
   return (
-    <div className="h-screen w-full p-2 border-4 border-gray-800">
+    <div className="h-screen w-full p-2">
       {/* -----------------------ganesh ji image-------------------------------*/}
       <div className="h-100 w-full bg-cover bg-center"
         style={{ backgroundImage: "url('/images/ganeshji2.png')" }}></div>
@@ -111,7 +111,7 @@ export default function Home() {
         </p>
 
         {/* ---------------------------Form---------------------------- */}
-        <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center">
+        <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center bg-amber-400">
           <input
             type="text"
             className="mt-1 p-1 border border-gray-300 rounded-lg w-full max-w-sm"

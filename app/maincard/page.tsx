@@ -196,7 +196,7 @@ const Page = () => {
             Date:<span className="text-pink-900 font-bold font-dancing"> 04/05/2026, તિથિ-વૈશાખ વદ ત્રીજ</span>
           </div>
 
-          <div className="flex gap-6  text-yellow-200">
+          <div className="flex gap-6 text-cyan-950">
             <div>
               <p>{timeLeft.days}</p>
               <span className="text-xl mb-3 text-pink-900 ">Days</span>
