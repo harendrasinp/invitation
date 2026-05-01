@@ -187,7 +187,7 @@ const Page = () => {
             </motion.div>
           </div>
         </div>
-        <div className="border-4 border-gray-800">
+        <div className="border-[1.2rem] border-gray-800">
           <img src="/images/home1.png" alt="family photo" width={250} />
         </div>
         {/* ⏳ Countdown Timer */}
