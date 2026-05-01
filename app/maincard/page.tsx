@@ -37,7 +37,7 @@ const Page = () => {
     seconds: 0,
   });
   const targetDate = new Date(2026, 4, 5, 11, 0, 0);
-  const format = (num) => String(num).padStart(2, "0");
+  const format = (num: number): string => String(num).padStart(2, "0");
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date();
