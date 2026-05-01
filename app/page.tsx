@@ -88,7 +88,7 @@ export default function Home() {
     setGender(localGender);
 
     // 🎵 Music play on button click
-    const audio = new Audio("/music/song.mp3");
+    const audio = new Audio("/music/bgsound.mp3");
     audio.loop = true;
     audio.play().catch((err) => console.log(err));
 
