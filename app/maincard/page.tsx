@@ -193,7 +193,7 @@ const Page = () => {
         {/* ⏳ Countdown Timer */}
         <div className="mt-8 text-center bg-black/20 backdrop-blur-[5px] px-6 py-4 rounded-xl">
           <div className="mb-3 text-pink-900">
-            Date:<span className="text-pink-900 font-bold font-dancing"> 04/05/2026, તિથિ-વૈશાખ સુદ  સાતમ</span>
+            Date:<span className="text-pink-900 font-bold font-dancing"> 04/05/2026, તિથિ-વૈશાખ વદ ત્રીજ</span>
           </div>
 
           <div className="flex gap-6  text-yellow-200">
