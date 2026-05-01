@@ -7,28 +7,28 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 const Page = () => {
   const [showFlower, setShowFlower] = useState(false);
   const { userName, gender } = useContext(DataContext);
-  const audioRef = useRef<any>(null);
+  // const audioRef = useRef<any>(null);
   const prefix = gender === "Male" ? "Mr." : "Ms.";
 
   // 🔊 Audio autoplay
-  useEffect(() => {
-    const shouldPlay = localStorage.getItem("playMusic");
+  // useEffect(() => {
+  //   const shouldPlay = localStorage.getItem("playMusic");
 
-    if (shouldPlay === "true" && audioRef.current) {
-      audioRef.current.play().catch(() => { });
-    }
+  //   if (shouldPlay === "true" && audioRef.current) {
+  //     audioRef.current.play().catch(() => { });
+  //   }
 
-    const playOnClick = () => {
-      audioRef.current?.play().catch(() => { });
-      document.removeEventListener("click", playOnClick);
-    };
+  //   const playOnClick = () => {
+  //     audioRef.current?.play().catch(() => { });
+  //     document.removeEventListener("click", playOnClick);
+  //   };
 
-    document.addEventListener("click", playOnClick);
+  //   document.addEventListener("click", playOnClick);
 
-    return () => {
-      document.removeEventListener("click", playOnClick);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("click", playOnClick);
+  //   };
+  // }, []);
 
   // ⏳ Countdown Timer
   const [timeLeft, setTimeLeft] = useState({
@@ -37,7 +37,7 @@ const Page = () => {
     minutes: 0,
     seconds: 0,
   });
- const targetDate = new Date(2026, 4, 4, 8, 0, 0);
+  const targetDate = new Date(2026, 4, 4, 8, 0, 0);
   const format = (num: number): string => String(num).padStart(2, "0");
   useEffect(() => {
     const timer = setInterval(() => {
@@ -89,7 +89,7 @@ const Page = () => {
   }, []);
   // ------------------------------Flower Animation on Click-------------------------------
   useEffect(() => {
-    const timer= setTimeout(() => {
+    const timer = setTimeout(() => {
       setShowFlower(true);
     }, 1000); // 5 seconds delay
 
@@ -97,6 +97,10 @@ const Page = () => {
   }, []);
   return (
     <div className="relative w-full min-h-screen text-white">
+      {/* 🔊 Audio */}
+      {/* <audio ref={audioRef} loop>
+        <source src="/sound/bgsound2.mp3" type="audio/mp3" />
+      </audio> */}
       <div className="absolute top-[-9.7rem] w-104 ml-[-0.9rem]">
         <img src="images/flower.png" alt="flower image" className="w-120 h-96" />
       </div>
@@ -110,11 +114,6 @@ const Page = () => {
       >
         <source src="/images/fram.mp4" type="video/mp4" />
       </video>
-
-      {/* 🔊 Audio */}
-      <audio ref={audioRef} loop>
-        <source src="/sound/bgsound2.mp3" type="audio/mp3" />
-      </audio>
 
       {/* 🌟 Main Content */}
       <div className="relative z-10 flex flex-col items-center">
