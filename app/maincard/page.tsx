@@ -175,7 +175,7 @@ useEffect(() => {
               animate={{ y: "-100%" }}
               transition={{ duration: 12, ease: "linear", repeat: Infinity }}>
               <p>Ankur.U.chaudhari</p>
-              <p>Urvashi.U.chaudhari</p>
+              <p>Urvashi.A.chaudhari</p>
               <p>Dhuti.A.chaudhari</p>
               <p>Mivan.A.chaudhari</p>
             </motion.div>
