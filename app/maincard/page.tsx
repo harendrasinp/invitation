@@ -143,7 +143,7 @@ useEffect(() => {
             <img
               src="/images/latter1.png"
               alt="latter-image"
-              className="w-96 h-85"
+              className="w-96 h-95"
             />
 
             <div className="absolute flex items-center justify-center w-full h-full">
@@ -157,6 +157,7 @@ useEffect(() => {
                   Your presence will add joy to our celebration.
                 </p>
                 <p className="text-white"> Ankur.U.chaudhari</p>
+                <p className="text-white"> Urvashi.A.chaudhari</p>
               </div>
             </div>
 
@@ -190,7 +191,7 @@ useEffect(() => {
             Date:<span className="text-pink-900 font-bold font-dancing"> 04/05/2026, તિથિ-વૈશાખ વદ ત્રીજ</span>
           </div>
 
-          <div className="flex gap-6 text-cyan-950">
+          <div className="flex gap-6 text-amber-700 font-bold">
             <div>
               <p>{timeLeft.days}</p>
               <span className="text-xl mb-3 text-pink-900 ">Days</span>
